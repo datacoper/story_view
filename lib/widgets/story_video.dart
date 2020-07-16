@@ -26,7 +26,7 @@ class VideoLoader {
     }
 
     final fileStream = DefaultCacheManager()
-        .getFileStream(this.url, headers: this.requestHeaders);
+        .getFile(this.url, headers: this.requestHeaders);
 
     fileStream.listen((fileResponse) {
       if (fileResponse is FileInfo) {
